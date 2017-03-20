@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/exchange"
+            android:icon="@drawable/exchange"
+            android:title="Exchange" />
+
+        <item
+            android:id="@+id/inbox"
+            android:icon="@drawable/card"
+
+            android:title="@string/inbox" />
+        <item
+            android:id="@+id/setting"
+            android:icon="@drawable/settings"
+            android:title="Setting" />
+    </group>
+
+    <!--<item android:title="Hashtag">-->
+        <!--<menu>-->
+
+            <!--<item-->
+                <!--android:title="#School" />-->
+        <!--</menu>-->
+    <!--</item>-->
+
+</menu>

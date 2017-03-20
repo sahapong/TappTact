@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_exchange"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.example.jobs.senior1.ExchangeActivity">
+
+    <RelativeLayout
+        android:id="@+id/noFound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_found"
+            android:textAlignment="center"
+            android:textSize="@dimen/text_default" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+
+        <ProgressBar
+            android:id="@+id/pog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:paddingBottom="@dimen/text_default" />
+
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pog"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:text="Finding nearby users to exchange"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:background="@drawable/background"
+            android:clickable="true"
+            android:text="Cancel"
+            android:textAlignment="center"
+            android:textSize="@dimen/text_default" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Reresh"-->
+        <!--android:id="@+id/btnRefresh"/>-->
+        <TextView
+            android:id="@+id/found"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:elevation="2dp"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:text="0 Found"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_default" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true" />
+    </LinearLayout>
+</FrameLayout>
